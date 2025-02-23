@@ -16,7 +16,7 @@ export const EditTask = () => {
   // Fetch the existing task data
   useEffect(() => {
     axios
-      .get(`https://react-task-management-server-steel.vercel.app/task/${id}`)
+      .get(`https://job-task-server-lac.vercel.app/task/${id}`)
       .then((response) => setTask(response.data))
       .catch((error) => console.error("Error fetching task:", error));
   }, [id]);
@@ -30,7 +30,7 @@ export const EditTask = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`https://react-task-management-server-steel.vercel.app/task/${id}`, task);
+      await axios.put(`https://job-task-server-lac.vercel.app/task/${id}`, task);
       Swal.fire("Success!", "Task updated successfully.", "success");
       navigate("/managetask"); 
     } catch (error) {

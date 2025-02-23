@@ -29,7 +29,7 @@ const AddTask = () => {
     // console.log(newTask)
 
     try {
-      const response = await axios.post("https://react-task-management-server-steel.vercel.app/addtask", newTask);
+      const response = await axios.post("https://job-task-server-lac.vercel.app/addtask", newTask);
       console.log("Task Added:", response.data);
       Swal.fire({
         title: "Task added Successfully!",
